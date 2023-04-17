@@ -1,47 +1,48 @@
 import './App.css'
 import React, { useState } from "react"
 
-/* const API_URL = `https://dictionaryapi.com/api/v3/references/collegiate/json/curfew?key=1ae97b82-bd14-46a8-a87d-e1082c1300b4`
-
-fetch(API_URL)
-    .then((response) => {
-        return response.json()
-})
-    .then((response) => {
-        console.log(response)
-}) */
-
 function App() {
+  const [wordSearch, setWordSearch] = useState([])
+
+  function addWordSearch(e) {
+    e.preventDefault()
+    setWordSearch([...wordSearch, e])
+  }
+
   return (
     <div id="recentSearches">
-      <PastSearchList />
+        <header className="App-header">
+            
+        </header>
+        <body className="App-body">
+          <h1 className="App-body-h1">What's the origin of ...</h1>
+            <form>
+              <input
+                name="myInput"
+                value={wordSearch}
+                onChange={e => setWordSearch(e.target.value)}>
+              </input>
+              
+              <button
+                id="homeSearchButton" 
+                type="submit"
+                onClick={() => setWordSearch(!wordSearch)}>SEARCH</button>
+            </form>
+        </body>
+        <footer className="App-footer">
+          <h1 className="App-h1">MOST RECENT SEARCHES</h1>
+            <div className='App-div'>
+              {wordSearch !== '' && <p className="App-footer-p">{wordSearch}</p>}
+            </div>
+        </footer>
     </div>
   )
 }
 
-function PastSearchList() {
-  const [wordSearch, setWordSearch] = useState('')
-
-  return (
-      <div className="pastSearchList">
-        <header className="pastSearchList-header">
-            <h1 className="pastSearchList-h1">What's the origin of...</h1>
-              <form>
-                  <input
-                    name="myInput"
-                    value={wordSearch}
-                    onChange={e => setWordSearch(e.target.value)}>
-                  </input>
-                
-                <button
-                  id="homeSearchButton" 
-                  type="submit"
-                  onClick={alert}>SEARCH</button>
-              </form>
-        </header>
-        {wordSearch !== '' && <p>You want to search for: {wordSearch}.</p>}
-    </div>
-    )
-  }
+function AddToList(props) {
+  const searchList = props.wordSearch.map(function(item, index) {
+    return AddToList() 
+  })
+}
 
 export default App;
