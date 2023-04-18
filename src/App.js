@@ -4,11 +4,6 @@ import React, { useState } from "react"
 function App() {
   const [wordSearch, setWordSearch] = useState([])
 
-  function addWordSearch(e) {
-    e.preventDefault()
-    setWordSearch([...wordSearch, e])
-  }
-
   return (
     <div id="recentSearches">
         <header className="App-header">
@@ -32,17 +27,14 @@ function App() {
         <footer className="App-footer">
           <h1 className="App-h1">MOST RECENT SEARCHES</h1>
             <div className='App-div'>
-              {wordSearch !== '' && <p className="App-footer-p">{wordSearch}</p>}
+              <ul>
+                {wordSearch !== '' && <p className="App-footer-p">{wordSearch}
+                <input type="checkbox" /></p>}
+              </ul>
             </div>
         </footer>
     </div>
   )
-}
-
-function AddToList(props) {
-  const searchList = props.wordSearch.map(function(item, index) {
-    return AddToList() 
-  })
 }
 
 export default App;
