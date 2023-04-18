@@ -26,6 +26,7 @@ function getList(word) {
 
 return (
 <div className="Home">
+  <h1 className="App-section-h1">What's the origin of ...</h1>
     <form onSubmit={handleSubmit}>
     <input
         type="text"

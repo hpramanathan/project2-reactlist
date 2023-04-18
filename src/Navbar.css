@@ -1,3 +1,5 @@
 .Navbar {
+    margin: 5px 0px 5px 0px;
+    min-height: 5vh;
     text-align: center;
 }

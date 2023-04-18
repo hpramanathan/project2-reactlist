@@ -10,15 +10,6 @@
     color: white;
   }
   
-  .Home-header {
-    background-color:white;
-    min-height: 6vh;
-  }
-  
-  .Home-section {
-
-  }
-  
   form {
     display: flex;
     flex-direction: column;
@@ -32,6 +23,10 @@
     border-radius: 20px;
     text-align: center;
     font-size: 0.8em;
+  }
+
+  button {
+    background-color: cadetblue;
   }
   
   .Home-footer {
