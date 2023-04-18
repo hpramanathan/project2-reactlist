@@ -1,8 +1,25 @@
 import './App.css'
 import React, { useState } from "react"
 
+const initialWordList = []
+
 function App() {
-  const [wordSearch, setWordSearch] = useState([])
+  const [word, setWord] = useState('')
+  const [wordList, setWordList] = useState(initialWordList)
+
+  const handleChange = e => {
+    setWord(e.target.value)
+  }
+
+  const handleSubmit = e => {
+    if (word) {
+      setWordList(wordList.concat(word))
+    }
+
+    setWord('')
+
+    e.preventDefault()
+  }
 
   return (
     <div id="recentSearches">
@@ -14,22 +31,24 @@ function App() {
             <form>
               <input
                 name="myInput"
-                value={wordSearch}
-                onChange={e => setWordSearch(e.target.value)}>
+                value={word}
+                onChange={handleChange}>
               </input>
               
               <button
                 id="homeSearchButton" 
                 type="submit"
-                onClick={() => setWordSearch(!wordSearch)}>SEARCH</button>
+                onClick={handleSubmit}>SEARCH</button>
             </form>
         </body>
         <footer className="App-footer">
           <h1 className="App-h1">MOST RECENT SEARCHES</h1>
             <div className='App-div'>
               <ul>
-                {wordSearch !== '' && <p className="App-footer-p">{wordSearch}
-                <input type="checkbox" /></p>}
+                {wordList.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+                <input type="checkbox" />
               </ul>
             </div>
         </footer>
