@@ -7,7 +7,7 @@
   min-height: 6vh;
 }
 
-.App-body {
+.App-section {
   background-color: darkred;
   min-height: 40vh;
   display: flex;
@@ -39,6 +39,12 @@ input {
 
 .App-h1 {
   text-align: left;
+}
+
+.App-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 
 .App-footer-p {
