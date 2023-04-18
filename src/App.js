@@ -1,17 +1,23 @@
-import './App.css'
-import React, { useState } from "react"
+import './App.css';
+import { Routes, Route } from "react-router-dom"
+import Favourites from "./routes/Favourites";
+import Home from "./routes/Home";
+import Lists from "./routes/Lists";
+import Navbar from './Navbar';
 
-export function App() {
-  return fetch('https://dictionaryapi.com/api/v3/references/collegiate/json/test?key=1ae97b82-bd14-46a8-a87d-e1082c1300b4')
-    .then(data => data.json())
+export default function App() {
+
+return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/lists" element={<Lists />} />
+      </Routes>
+    </>
+  )
 }
-
-const [word, setWord] = useState("");
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-}
-
 
 /* const initialWordList = []
 const api_endpoint = `https://dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=1ae97b82-bd14-46a8-a87d-e1082c1300b4`
@@ -87,5 +93,3 @@ function App() {
     </div>
   )
 } */
-
-export default App;
