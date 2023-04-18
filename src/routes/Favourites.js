@@ -1,7 +1,9 @@
-
+import "./Favourites.css"
 
 export default function Favourites() {
     return (
-        <div>My Favourites</div>
+        <div className="Favourites">
+            <h1>My Favourites</h1>
+        </div>
     )
 }
