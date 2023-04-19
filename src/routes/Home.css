@@ -27,26 +27,24 @@
 
   button {
     background-color: cadetblue;
+    color: white;
   }
   
-  .Home-footer {
+  .RecentList {
     padding: 0px 0px 0px 30px;
   }
   
-  .Home-h1 {
+  .Home-h2 {
     text-align: left;
   }
   
-  .Home-list {
+  .RecentList-li {
     list-style: none;
     display: flex;
     flex-direction: row;
-  }
-  
-  .Home-footer-p {
     font-size: 1.5em;
   }
   
-  .Home-link {
+  /* .Home-link {
     color: #61dafb;
-  }
+  } */
