@@ -1,6 +1,8 @@
 import "./Home.css"
 import Term from "../Term";
 import { useState } from "react";
+import uuid from "react-uuid";
+// import { Link } from "react-router-dom";
 
 export default function Home() {
 
@@ -31,7 +33,7 @@ export default function Home() {
     return fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         const newTerm = {
           id: data[0].meta.uuid,
           name: searchTerm,
@@ -39,6 +41,7 @@ export default function Home() {
         }
         // console.log(newTerm)
         setSearchTermList([newTerm, ...searchTermList])
+        // console.log(uuid())
       })
   }
 
@@ -58,6 +61,11 @@ export default function Home() {
     setRemoveSelectedTerms([]);
   }
 
+  function clearAll() {
+    setSearchTermList([])
+    setRemoveSelectedTerms([])
+  }
+
   return (
     <>
       <div className="Home">
@@ -75,7 +83,9 @@ export default function Home() {
         <h1 className="Home-h1">WORD SEARCH LIST</h1>
         <button onClick={removeCheckedTerms}>Clear Selected</button>
         <span>&nbsp; </span>
-        <button>Clear All</button>
+        <button onClick={clearAll}>Clear All</button>
+        <span>&nbsp; </span>
+        {/* <Link to path="./favourites" element={<Favourites />}><button>Add Your Own</button></Link> */}
         <ul>
           {searchTermList.map((term) => (
             <Term
