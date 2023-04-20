@@ -6,7 +6,7 @@ export default function Home() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [searchTermList, setSearchTermList] = useState([])
-
+  const [removeSelectedTerms, setRemoveSelectedTerms] = useState([])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,6 +16,14 @@ export default function Home() {
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value)
+  }
+
+  const handleChecked = (id, checked) => {
+    if (checked) {
+      setRemoveSelectedTerms([...removeSelectedTerms, id])
+    } else {
+      setRemoveSelectedTerms(removeSelectedTerms.filter((uncheckedId) => uncheckedId !== id))
+    }
   }
 
   function getList(searchTerm) {
@@ -39,10 +47,15 @@ export default function Home() {
     ids.forEach((id) => {
       const indexToRemove = tempSearchTermList.findIndex((term) => term.id === id)
       if (indexToRemove !== -1) {
-        tempSearchTermList.splice(indexToRemove,1)
+        tempSearchTermList.splice(indexToRemove, 1)
       }
     })
     setSearchTermList(tempSearchTermList)
+  }
+
+  function removeCheckedTerms() {
+    removeTerms(removeSelectedTerms);
+    setRemoveSelectedTerms([]);
   }
 
   return (
@@ -59,12 +72,21 @@ export default function Home() {
         </form>
       </div>
       <div className="RecentList">
-        <h2 className="Home-h2">WORD SEARCH LIST</h2>
+        <h1 className="Home-h1">WORD SEARCH LIST</h1>
+        <button onClick={removeCheckedTerms}>Clear Selected</button>
+        <span>&nbsp; </span>
+        <button>Clear All</button>
         <ul>
-          {searchTermList.map((term, index) => (
-            <Term key={term.id} term={term} removeTerms={removeTerms} />
+          {searchTermList.map((term) => (
+            <Term
+              key={term.id}
+              term={term}
+              removeTerms={removeTerms}
+              removeSelectedTerms={removeSelectedTerms}
+              setRemoveSelectedTerms={setRemoveSelectedTerms}
+              handleChecked={handleChecked}
+            />
           ))}
-          
         </ul>
       </div>
     </>
