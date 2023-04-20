@@ -3,7 +3,7 @@ import ManualAdd from "../ManualAdd";
 import Term from "../Term";
 import { useState } from "react";
 
-export default function Home(props) {
+export default function Home() {
 
   const [searchTermList, setSearchTermList] = useState([])
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,6 +29,17 @@ export default function Home(props) {
 
   const handleAddManualTerm = (newTerm) => {
     setSearchTermList([newTerm, ...searchTermList])
+  }
+
+  const handleEditTerm = (editedTerm) => {
+    const updatedTermList = searchTermList.map((term) => {
+      if (term.id === editedTerm.id) {
+        return editedTerm;
+      } else {
+        return term;
+      }
+    })
+    setSearchTermList(updatedTermList)
   }
 
   function getList(searchTerm) {
@@ -104,6 +115,7 @@ export default function Home(props) {
               removeSelectedTerms={removeSelectedTerms}
               setRemoveSelectedTerms={setRemoveSelectedTerms}
               handleChecked={handleChecked}
+              handleEditTerm={handleEditTerm}
             />
           ))}
         </ul>

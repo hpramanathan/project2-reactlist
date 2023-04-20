@@ -33,17 +33,18 @@ export default function ManualAdd(props) {
             <h1>Add your own word</h1>
 
             <form onSubmit={handleManualSubmit}>
-                <label className="label-word">Word:</label>
+                <label className="label-word" htmlFor="manualName">Word:</label>
                 <input
                     type="text"
-                    rows="2"
+                    id="manualName"
                     value={manualName}
                     onChange={handleWord} />
                 <br />
-                <label>Etymology:</label>
+                <label htmlFor="manualEtym">Etymology:</label>
                 <input
                     className="InputEtym"
                     type="text"
+                    id="manualEtym"
                     value={manualEtym} 
                     onChange={handleEtym} />
                 <br />
