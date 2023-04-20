@@ -1,0 +1,12 @@
+.Manual {
+    text-align: center;
+}
+
+label {
+    padding: 0px 0px 10px 0px;
+}
+
+.InputEtym {
+    width: 500px;
+    height: 50px;
+}
