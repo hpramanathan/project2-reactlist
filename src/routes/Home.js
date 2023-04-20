@@ -1,13 +1,13 @@
 import "./Home.css"
+import Add from "./Add";
 import Term from "../Term";
 import { useState } from "react";
-import uuid from "react-uuid";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Home() {
+export default function Home(props) {
 
-  const [searchTerm, setSearchTerm] = useState("");
   const [searchTermList, setSearchTermList] = useState([])
+  const [searchTerm, setSearchTerm] = useState("");
   const [removeSelectedTerms, setRemoveSelectedTerms] = useState([])
 
   const handleSubmit = (e) => {
@@ -26,6 +26,10 @@ export default function Home() {
     } else {
       setRemoveSelectedTerms(removeSelectedTerms.filter((uncheckedId) => uncheckedId !== id))
     }
+  }
+
+  const handleAddManualTerm = (newTerm) => {
+    setSearchTermList([newTerm, ...searchTermList])
   }
 
   function getList(searchTerm) {
@@ -85,7 +89,8 @@ export default function Home() {
         <span>&nbsp; </span>
         <button onClick={clearAll}>Clear All</button>
         <span>&nbsp; </span>
-        {/* <Link to path="./favourites" element={<Favourites />}><button>Add Your Own</button></Link> */}
+
+        <Link to="./add"><button onClick={props.handleAddManualItem}>Add Your Own</button></Link>
         <ul>
           {searchTermList.map((term) => (
             <Term
@@ -99,6 +104,7 @@ export default function Home() {
           ))}
         </ul>
       </div>
+      <Add handleAddManualTerm={handleAddManualTerm} />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom"
-import Favourites from "./routes/Favourites";
+import Add from "./routes/Add";
 import Home from "./routes/Home";
 import Lists from "./routes/Lists";
 import Navbar from './Navbar';
@@ -12,7 +12,7 @@ return (
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/add" element={<Add />} />
         <Route path="/lists" element={<Lists />} />
       </Routes>
     </>
