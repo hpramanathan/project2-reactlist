@@ -5,7 +5,7 @@
 
 
 ## Deployment Link
-- You can access the project here: [Hari's Etymology Dictionary React List App](https://hpramanathan.github.io/project2-reactlist/)
+- You can access the project here: [Hari's Etymology Dictionary React List App](https://hpramanathan.github.io/project2-reactlist/).
 
 
 ## Getting Start/Code Installation
