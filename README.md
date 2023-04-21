@@ -1,22 +1,22 @@
 # PROJECT 2: ETYMOLOGY DICTIONARY
 
-## DESCRIPTION
+## Description
 - This project is a web application that allows users to search for the etymology of a given word. Users can also add words manually to their search list, edit existing words in their list, and remove words from their list. The application uses the [Merriam-Webster Collegiate Thesaurus API]https://dictionaryapi.com/products/api-collegiate-thesaurus) to provide the etymology data.
 
 
-## DEPLOYMENT LINK
+## Deployment Link
 - You can access the project here: [Hari's Etymology Dictionary React List App](https://hpramanathan.github.io/project2-reactlist/)
 
 
-## GETTING STARTED/CODE INSTALLATION
+## Getting Start/Code Installation
 - The user just needs to load the deployment link above to access the app.
 
 
-## TIMEFRAME & WORKING TEAM (SOLO)
+## Timefram and Working Team (Solo)
 - We were given 6 days to work on this project on our own.
 
 
-## TECHNOLOGIES USED
+## Technologies Used
 - CODE VERSIONING/CONTROL
   - Git and GitHub
 - DEVELOPER TOOLS
@@ -29,7 +29,7 @@
   - JSX
 
 
-## PLANNING
+## Planning
 - I used Excalidraw to create a basic wireframe of the game console on the webpage.
 
 ![My Wireframe](project2-wireframe.svg)
@@ -37,7 +37,7 @@
 ![My Brief User Stories](project2-userstories.png)
 
 
-## BUILD/CODE PROCESS
+## Build/Code Process
 - I started this project by creating a wireframe and a very brief set of user stories to help me visualize what I wanted to build and what features it would have. I then began coding the main components of the application, including the API search bar and the recent search list. I used React Router to handle the routing between the home page and the under construction list page. 
 - I also incorporated CSS styling to create a visually appealing and responsive design.
 - One of the biggest challenges I faced during development was figuring out how to handle editing existing words in the search list. I ultimately decided to use a state variable to keep track of whether the user was editing a word or not, and conditionally render the appropriate UI elements based on that state.
