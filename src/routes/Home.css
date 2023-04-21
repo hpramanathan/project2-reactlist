@@ -10,6 +10,7 @@
     color: white;
   }
 
+  /* Style rules for the "OR" element */
   .Home-h1-or {
     margin: 0px 100px 0px 100px;
     padding: 5px 5px;
@@ -74,6 +75,7 @@
     transform: scale(1.5);
   }
   
+  /* Style rules for checkbox focus state */
   .RecentList-li input[type="checkbox"]:focus {
     outline: none;
     box-shadow: none;

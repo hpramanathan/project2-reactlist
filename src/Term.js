@@ -3,27 +3,32 @@ import "./Term.css"
 
 export default function Term(props) {
 
+    // State variables for handling editing and selection of terms in list
     const [isEditing, setIsEditing] = useState(false);
     const [editedTermName, setEditedTermName] = useState(props.term.name);
     const [editedTermEtym, setEditedTermEtym] = useState(props.term.etym);
     const [isTermSelected, setTermIsSelected] = useState(false);
 
+    // Check if term is selected
     const isChecked = props.removeSelectedTerms.includes(props.term.id)
     const handleCheckboxChange = (e) => {
         const checked = e.target.checked;
         props.handleChecked(props.term.id, checked)
     };
 
+    // Handle click for editing
     const handleEditClick = () => {
         setIsEditing(true);
     };
 
+    // Handle canceling an edit
     const handleCancelEditClick = () => {
         setIsEditing(false);
         setEditedTermName(props.term.name);
         setEditedTermEtym(props.term.etym);
     };
 
+    // Handle saving an edited term
     const handleEditSaveClick = () => {
         const editedTerm = {
             id: props.term.id,
@@ -34,6 +39,7 @@ export default function Term(props) {
         setIsEditing(false);
     }
 
+    // Handle changes to the term name and etymology during editing
     const handleTermNameChange = (e) => {
         setEditedTermName(e.target.value);
     };
@@ -42,10 +48,12 @@ export default function Term(props) {
         setEditedTermEtym(e.target.value);
     }
 
+    // Handle click for selecting a term as a favourite
     const handleItemClick = () => {
         setTermIsSelected(!isTermSelected);
     }
 
+    // Renders the Term component with appropriate state and props from Home.js
     return <li className={`RecentList-li ${isTermSelected ? "selected" : ""}`}
                onClick={handleItemClick}>
         {!isEditing && (

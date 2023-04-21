@@ -1,13 +1,16 @@
+/* Styles for individual term in the search list */
 .RecentList-li {
     list-style: none;
     display: flex;
   }
 
+ /* Style for etymology input */ 
 #termEtym {
     width: 500px;
     height: 50px;
 }
 
+/* Style for selected term (ie. favourite) in the term list */
 .selected {
   background-color: lightblue;
 }
