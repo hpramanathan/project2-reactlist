@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# PROJECT 2: ETYMOLOGY DICTIONARY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## DESCRIPTION
+- This project is a web application that allows users to search for the etymology of a given word. Users can also add words manually to their search list, edit existing words in their list, and remove words from their list. The application uses the [Merriam-Webster Collegiate Thesaurus API]https://dictionaryapi.com/products/api-collegiate-thesaurus) to provide the etymology data.
 
-## Available Scripts
 
-In the project directory, you can run:
+## DEPLOYMENT LINK
+- You can access the project here: [Hari's Etymology Dictionary React List App](https://hpramanathan.github.io/project2-reactlist/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## GETTING STARTED/CODE INSTALLATION
+- The user just needs to load the deployment link above to access the app.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## TIMEFRAME & WORKING TEAM (SOLO)
+- We were given 6 days to work on this project on our own.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## TECHNOLOGIES USED
+- CODE VERSIONING/CONTROL
+  - Git and GitHub
+- DEVELOPER TOOLS
+  - React, React Router, Windows Subsystem for Linux, Visual Studio Code, Mozilla Firefox and Mozilla Firefox Developer Tools
+- WIREFRAME & USER STORIES
+  - Excalidraw
+- CODING
+  - CSS
+  - JavaScript
+  - JSX
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## PLANNING
+- I used Excalidraw to create a basic wireframe of the game console on the webpage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![My Wireframe](project2-wireframe.svg)
 
-### `npm run eject`
+![My Brief User Stories](project2-userstories.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## BUILD/CODE PROCESS
+- I started this project by creating a wireframe and a very brief set of user stories to help me visualize what I wanted to build and what features it would have. I then began coding the main components of the application, including the API search bar and the recent search list. I used React Router to handle the routing between the home page and the under construction list page. 
+- I also incorporated CSS styling to create a visually appealing and responsive design.
+- One of the biggest challenges I faced during development was figuring out how to handle editing existing words in the search list. I ultimately decided to use a state variable to keep track of whether the user was editing a word or not, and conditionally render the appropriate UI elements based on that state.
+- I also struggled with incorporating the Merriam-Webster API, as the data it returns is quite complex. I used the fetch API to make requests to the API and parsed the data using JavaScript's built-in JSON object.
+- Overall, the development process was a great learning experience and helped me to gain a deeper understanding of React, React Router, and API integration.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Unsolved Problems
 
-## Learn More
+- One issue that I was unable to fully resolve in this iteration of the project is handling errors that occur when making requests to the Merriam-Webster API. Currently, if an error occurs, the application simply logs an error message to the console. In future iterations, I would like to implement more robust error handling to provide more meaningful feedback to the user.
+- Another feature that I would like to add in the future is the ability for users to save their search list for future reference. This would require incorporating some sort of backend server and database to store user data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Functionality
 
-### Code Splitting
+- One of my favorite features of this application is the ability for users to add words manually to their search list. This allows users to add an etymology of any word or phrase that is not in the dictionary or even just make up a new word and/or etymology.
+- Another feature that I am proud of is the ability for users to edit existing words in their search list. This was a challenge to implement, but I think it adds a lot of value to the application and makes it more user-friendly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Conclusion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Overall, I am pleased with how this project turned out and feel that it was a great learning experience. I enjoyed the challenge of integrating an external API into my application and am excited to continue improving and expanding upon this project in the future.

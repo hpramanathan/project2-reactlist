@@ -45,6 +45,7 @@ export default function ManualAdd(props) {
                     className="InputEtym"
                     type="text"
                     id="manualEtym"
+                    placeholder="Enter the word's origin here"
                     value={manualEtym} 
                     onChange={handleEtym} />
                 <br />
