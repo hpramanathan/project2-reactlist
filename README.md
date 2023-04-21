@@ -1,7 +1,7 @@
 # PROJECT 2: ETYMOLOGY DICTIONARY
 
 ## Description
-- This project is a web application that allows users to search for the etymology of a given word. Users can also add words manually to their search list, edit existing words in their list, and remove words from their list. The application uses the [Merriam-Webster Collegiate Thesaurus API]https://dictionaryapi.com/products/api-collegiate-thesaurus) to provide the etymology data.
+- This project is a web application that allows users to search for the etymology of a given word. Users can also add words manually to their search list, edit existing words in their list, and remove words from their list. The application uses the [Merriam-Webster Collegiate Thesaurus API](https://dictionaryapi.com/products/api-collegiate-thesaurus) to provide the etymology data.
 
 
 ## Deployment Link
