@@ -1,7 +1,7 @@
 # PROJECT 2: ETYMOLOGY DICTIONARY
 
 ## Description
-- This project is a web application that allows users to search for the etymology of a given word. Users can also add words manually to their search list, edit existing words in their list, and remove words from their list. The application uses the [Merriam-Webster Collegiate Thesaurus API](https://dictionaryapi.com/products/api-collegiate-thesaurus) to provide the etymology data.
+- This project is a web application that allows users to search for the etymology of a given word. Users can also add words manually to their search list, edit existing words in their list, remove words from their list and favourite a particular word by clicking anywhere on the term (it'll change colour). The application uses the [Merriam-Webster Collegiate Thesaurus API](https://dictionaryapi.com/products/api-collegiate-thesaurus) to provide the etymology data.
 
 
 ## Deployment Link
@@ -12,25 +12,30 @@
 - The user just needs to load the deployment link above to access the app.
 
 
-## Timefram and Working Team (Solo)
+## Timeframe and Working Team (Solo)
 - We were given 6 days to work on this project on our own.
 
 
 ## Technologies Used
-- CODE VERSIONING/CONTROL
+- **CODE VERSIONING/CONTROL**
   - Git and GitHub
-- DEVELOPER TOOLS
-  - React, React Router, Windows Subsystem for Linux, Visual Studio Code, Mozilla Firefox and Mozilla Firefox Developer Tools
-- WIREFRAME & USER STORIES
-  - Excalidraw
-- CODING
+- **CODING**
   - CSS
   - JavaScript
   - JSX
+- **DEVELOPER TOOLS**
+  - Mozilla Firefox
+  - Mozilla Firefox Developer Tools
+  - React
+  - React Router
+  - Visual Studio Code
+  - Windows Subsystem for Linux
+- **WIREFRAME & USER STORIES**
+  - Excalidraw
 
 
 ## Planning
-- I used Excalidraw to create a basic wireframe of the game console on the webpage.
+- I used Excalidraw to create a basic wireframe of the intended Home page.
 
 ![My Wireframe](project2-wireframe.svg)
 
