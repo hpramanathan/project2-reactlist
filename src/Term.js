@@ -6,6 +6,7 @@ export default function Term(props) {
     const [isEditing, setIsEditing] = useState(false);
     const [editedTermName, setEditedTermName] = useState(props.term.name);
     const [editedTermEtym, setEditedTermEtym] = useState(props.term.etym);
+    const [isTermSelected, setTermIsSelected] = useState(false);
 
     const isChecked = props.removeSelectedTerms.includes(props.term.id)
     const handleCheckboxChange = (e) => {
@@ -41,7 +42,12 @@ export default function Term(props) {
         setEditedTermEtym(e.target.value);
     }
 
-    return <li className="RecentList-li">
+    const handleItemClick = () => {
+        setTermIsSelected(!isTermSelected);
+    }
+
+    return <li className={`RecentList-li ${isTermSelected ? "selected" : ""}`}
+               onClick={handleItemClick}>
         {!isEditing && (
             <>
                 {props.term.name}

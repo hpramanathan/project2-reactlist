@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./routes/Home";
 import Lists from "./routes/Lists";
 import Navbar from './Navbar';
+import PageNotFound from './PageNotFound';
 
 export default function App() {
 
@@ -12,6 +13,7 @@ return (
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/lists" element={<Lists />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   )

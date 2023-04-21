@@ -104,8 +104,6 @@ export default function Home() {
         <span>&nbsp; </span>
         <button onClick={clearAll}>Clear All</button>
         <span>&nbsp; </span>
-        {/* <button onClick={props.handleAddManualTerm}>Add Your Own</button> */}
-        {/* <ManualAdd handleAddManualTerm={handleAddManualTerm} /> */}
         <ul>
           {searchTermList.map((term) => (
             <Term
